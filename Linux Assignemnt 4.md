@@ -117,3 +117,93 @@ root@nitesh:/home/MyFiles/Documents#
 ![image](https://github.com/gitnitesh1995/Linux-Assignment-4/assets/61899084/e662e10f-5390-49de-ba4c-4f061b933392)
 
 ***Q8. Execute the ls command to list files in the current directory. Save the output to a file named "file_list.txt." Then, use a pipe to filter the output through grep to display only files with a ".txt" extension.**
+
+root@nitesh:/home/MyFiles/Documents# touch file_list.txt
+
+root@nitesh:/home/MyFiles/Documents# ls > ./file_list.txt
+
+root@nitesh:/home/MyFiles/Documents# cat file_list.txt 
+
+abcd.bak
+
+ans.tar
+
+Backup
+
+document.txt
+
+file_list.txt
+
+fun.txt
+
+hardlink.txt
+
+lenovo.bak
+
+my_notes.txt
+
+symlink.txt
+
+yellow.bak
+
+root@nitesh:/home/MyFiles/Documents# grep '\.txt$' file_list.txt
+
+document.txt
+
+file_list.txt
+
+fun.txt
+
+hardlink.txt
+
+my_notes.txt
+
+symlink.txt
+
+root@nitesh:/home/MyFiles/Documents# 
+
+![image](https://github.com/gitnitesh1995/Linux-Assignment-4/assets/61899084/5ed3fff7-9424-4e20-b542-5e723e07777e)
+
+**Q9. Create a new text file named "my_notes.txt" using the touch command. Open the file in the Vim editor, add some text, and save the changes.**
+
+root@nitesh:/home/MyFiles/Documents# touch my_notes.txt
+
+root@nitesh:/home/MyFiles/Documents# vim my_notes.txt 
+
+root@nitesh:/home/MyFiles/Documents# cat my_notes.txt 
+
+hello ,this is question 9
+
+root@nitesh:/home/MyFiles/Documents# 
+
+![image](https://github.com/gitnitesh1995/Linux-Assignment-4/assets/61899084/a1495fae-92fe-469d-adce-71d03064e958)
+
+![image](https://github.com/gitnitesh1995/Linux-Assignment-4/assets/61899084/f3449e0a-c440-4e9b-b695-86ae76494fa0)
+
+**Q. 10Run the date command and store the output in a variable named "current_date." Display the value of the variable and append it to the "my_notes.txt" file.**
+
+root@nitesh:/home/MyFiles/Documents# current_date=$(date)
+
+root@nitesh:/home/MyFiles/Documents# echo "Current Date : $current_date"
+
+Current Date : Friday 02 February 2024 11:43:14 PM IST
+
+root@nitesh:/home/MyFiles/Documents# echo "$current_date" >> my_notes.txt
+
+root@nitesh:/home/MyFiles/Documents# ls
+
+abcd.bak  Backup        file_list.txt  hardlink.txt  my_notes.txt  yellow.bak
+
+ans.tar   document.txt  fun.txt        lenovo.bak    symlink.txt
+
+root@nitesh:/home/MyFiles/Documents# cat my_notes.txt 
+
+hello ,this is question 9
+
+Friday 02 February 2024 11:43:14 PM IST
+
+root@nitesh:/home/MyFiles/Documents# 
+
+![image](https://github.com/gitnitesh1995/Linux-Assignment-4/assets/61899084/0618e05d-8e5f-4c65-a78d-9daf388511d0)
+
+
