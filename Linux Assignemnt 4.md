@@ -63,3 +63,24 @@ root@nitesh:/home/MyFiles#
 
 ![image](https://github.com/gitnitesh1995/Linux-Assignment-4/assets/61899084/36c96388-cc07-408d-a882-8decb6081c26)
 
+**Q7. Use a wildcard character to copy all files from the "Documents" subdirectory of "MyFiles" to another directory named "Backup.**
+
+root@nitesh:/home/MyFiles# cp -r Documents/* /home/MyFiles/Backup/
+
+root@nitesh:/home/MyFiles# cd Backup/
+
+root@nitesh:/home/MyFiles/Backup# ls
+
+abcd.bak  ans.tar  Backup  document.txt  fun.txt  hardlink.txt  lenovo.bak  symlink.txt  yellow.bak
+
+root@nitesh:/home/MyFiles/Backup# cd ..
+
+root@nitesh:/home/MyFiles# cd Documents/
+
+root@nitesh:/home/MyFiles/Documents# ls
+
+abcd.bak  ans.tar  Backup  document.txt  fun.txt  hardlink.txt  lenovo.bak  symlink.txt  yellow.bak
+
+root@nitesh:/home/MyFiles/Documents# 
+
+![image](https://github.com/gitnitesh1995/Linux-Assignment-4/assets/61899084/e662e10f-5390-49de-ba4c-4f061b933392)
