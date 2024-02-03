@@ -51,3 +51,15 @@ root@nitesh:/home/MyFiles/Documents#
 
 ![image](https://github.com/gitnitesh1995/Linux-Assignment-4/assets/61899084/dcfd14da-fbec-43e6-aaf4-880ebc590cbf)
 
+**Q5. In the "MyFiles" directory, use a single command to list all files that start with the letter "a" and have a ".txt" extension.**
+
+root@nitesh:/home/MyFiles# touch apple.txt alpha.txt mango.txt laptop.txt almond.bak
+root@nitesh:/home/MyFiles# ls
+almond.bak  alpha.txt  apple.txt  Documents  hello  laptop.txt  mango.txt
+root@nitesh:/home/MyFiles# ls a*.txt 
+alpha.txt  apple.txt
+root@nitesh:/home/MyFiles# 
+
+
+![image](https://github.com/gitnitesh1995/Linux-Assignment-4/assets/61899084/36c96388-cc07-408d-a882-8decb6081c26)
+
