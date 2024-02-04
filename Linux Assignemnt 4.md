@@ -616,3 +616,25 @@ nitesh@nitesh:~$
 
 
 **Q25. Configure the password aging for the user "john_doe" to enforce a maximum password age of 60 days. Confirm that the changes take effect.**
+
+nitesh@nitesh:~$ sudo chage -M 60 john_doe
+
+nitesh@nitesh:~$ sudo chage -l john_doe
+
+Last password change					: Feb 04, 2024
+
+Password expires					: Apr 04, 2024
+
+Password inactive					: never
+
+Account expires						: never
+
+Minimum number of days between password change		: 0
+
+Maximum number of days between password change		: 60
+
+Number of days of warning before password expires	: 7
+
+nitesh@nitesh:~$ 
+
+![image](https://github.com/gitnitesh1995/Linux-Assignment-4/assets/61899084/3cda3013-9fea-4f90-ba5e-fb292dafcf38)
