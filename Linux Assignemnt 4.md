@@ -227,6 +227,23 @@ root@nitesh:/home/MyFiles/Documents#
 
 **Q12. Use the echo command to add a new line of text to the "my_notes.txt" file without overwriting existing content. Verify that the new text is appended.**
 
+root@nitesh:/home/MyFiles/Documents# echo "This is a new line of text." >> my_notes.txt 
+
+root@nitesh:/home/MyFiles/Documents# cat my_notes.txt 
+
+hello ,this is question 9
+
+Friday 02 February 2024 11:43:14 PM IST
+
+This is a new line of text.
+
+root@nitesh:/home/MyFiles/Documents# 
+
+![image](https://github.com/gitnitesh1995/Linux-Assignment-4/assets/61899084/b35d4516-db4f-45ba-80d6-b66f229e8984)
+
+
+**Q13. List all files in the "/etc" directory, filter the output to include only those containing the word "conf," and save the result to a file named "conf_files.txt."**
+
 root@nitesh:/home/MyFiles/Documents# ls /etc | grep "conf" > conf_files.txt
 
 root@nitesh:/home/MyFiles/Documents# cat conf_files.txt 
@@ -320,10 +337,6 @@ xattr.conf
 root@nitesh:/home/MyFiles/Documents# 
 
 ![image](https://github.com/gitnitesh1995/Linux-Assignment-4/assets/61899084/80335095-1ce5-4c8e-83c4-ad39292ab1ba)
-
-
-**Q13. List all files in the "/etc" directory, filter the output to include only those containing the word "conf," and save the result to a file named "conf_files.txt."**
-
 
 **Q14. Open the "my_notes.txt" file in Vim. Use Vim's search and replace functionality to replace all occurrences of the word "important" with "critical." Save the changes.**
 
