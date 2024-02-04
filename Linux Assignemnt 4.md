@@ -422,9 +422,75 @@ $
 
 **Q17. Modify the user account "john_doe" to change the default shell to "/bin/bash" and set the account's expiration date to one month from today.**
 
+nitesh@nitesh:~$ sudo chsh -s /bin/bash john_doe
+
+nitesh@nitesh:~$ sudo chage -E $(date -d "+1 month" +%Y-%m-%d) john_doe
+
+nitesh@nitesh:~$ sudo chage -l john_doe
+
+Last password change					: Feb 04, 2024
+
+Password expires					: never
+
+Password inactive					: never
+
+Account expires						: Mar 04, 2024
+
+Minimum number of days between password change		: 0
+
+Maximum number of days between password change		: 99999
+
+Number of days of warning before password expires	: 7
+
+nitesh@nitesh:~$ 
+
+![image](https://github.com/gitnitesh1995/Linux-Assignment-4/assets/61899084/aee34e88-d7b3-46f0-a316-879781804cbc)
+
+
 **Q18. Create a new group named "development_team." Add "john_doe" to this group and verify the group's existence.**
 
+nitesh@nitesh:~$ sudo addgroup development_team
+
+Adding group `development_team' (GID 1003) ...
+
+Done.
+
+nitesh@nitesh:~$ sudo adduser john_doe development_team
+
+Adding user `john_doe' to group `development_team' ...
+
+Adding user john_doe to group development_team
+
+Done.
+
+nitesh@nitesh:~$ grep development_team /etc/group
+
+development_team:x:1003:john_doe
+
+nitesh@nitesh:~$ groups john_doe
+
+john_doe : users development_team
+
+nitesh@nitesh:~$ 
+
+![image](https://github.com/gitnitesh1995/Linux-Assignment-4/assets/61899084/fb65b00b-360f-49d7-8b59-1a5c97302963)
+
 **Q19. Remove "john_doe" from the "users" group and add them to the "development_team" group. Confirm the changes.**
+
+nitesh@nitesh:~$ sudo usermod -g development_team john_doe
+
+nitesh@nitesh:~$ sudo adduser john_doe development_team
+
+The user `john_doe' is already a member of `development_team'.
+
+nitesh@nitesh:~$ groups john_doe
+
+john_doe : development_team
+
+nitesh@nitesh:~$ 
+
+![image](https://github.com/gitnitesh1995/Linux-Assignment-4/assets/61899084/7400effe-c273-40f4-a664-f84bd470fb9f)
+
 
 **Q20. Delete the user account "john_doe" and ensure that their home directory is also removed.**
 
