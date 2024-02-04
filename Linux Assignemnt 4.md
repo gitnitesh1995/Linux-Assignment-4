@@ -182,7 +182,7 @@ root@nitesh:/home/MyFiles/Documents#
 
 ![image](https://github.com/gitnitesh1995/Linux-Assignment-4/assets/61899084/f3449e0a-c440-4e9b-b695-86ae76494fa0)
 
-**Q. 10Run the date command and store the output in a variable named "current_date." Display the value of the variable and append it to the "my_notes.txt" file.**
+**Q10. Run the date command and store the output in a variable named "current_date." Display the value of the variable and append it to the "my_notes.txt" file.**
 
 root@nitesh:/home/MyFiles/Documents# current_date=$(date)
 
@@ -208,4 +208,143 @@ root@nitesh:/home/MyFiles/Documents#
 
 ![image](https://github.com/gitnitesh1995/Linux-Assignment-4/assets/61899084/0618e05d-8e5f-4c65-a78d-9daf388511d0)
 
+**Q11. Edit the Bash startup script (e.g., .bashrc) to set an environment variable named "CUSTOM_PATH" to a specific directory path. Ensure the variable is available in new shell sessions.**
 
+root@nitesh:/home/MyFiles/Documents# vim ~/.bash_profile
+root@nitesh:/home/MyFiles/Documents# cat ~/.bash_profile
+export CUSTOM_PATH="/home/MyFiles"
+
+
+root@nitesh:/home/MyFiles/Documents# source ~/.bash_profile
+
+root@nitesh:/home/MyFiles/Documents# echo $CUSTOM_PATH
+
+/home/MyFiles
+
+root@nitesh:/home/MyFiles/Documents# 
+
+![image](https://github.com/gitnitesh1995/Linux-Assignment-4/assets/61899084/6d041ead-ca40-4984-84d2-828d80732111)
+
+**Q12. Use the echo command to add a new line of text to the "my_notes.txt" file without overwriting existing content. Verify that the new text is appended.**
+
+root@nitesh:/home/MyFiles/Documents# ls /etc | grep "conf" > conf_files.txt
+
+root@nitesh:/home/MyFiles/Documents# cat conf_files.txt 
+
+adduser.conf
+
+apg.conf
+
+appstream.conf
+
+avrdude.conf
+
+brltty.conf
+
+ca-certificates.conf
+
+ca-certificates.conf.dpkg-old
+
+dconf
+
+debconf.conf
+
+deluser.conf
+
+e2scrub.conf
+
+fprintd.conf
+
+fuse.conf
+
+gai.conf
+
+hdparm.conf
+
+host.conf
+
+insserv.conf.d
+
+kernel-img.conf
+
+kerneloops.conf
+
+ld.so.conf
+
+ld.so.conf.d
+
+libao.conf
+
+libaudit.conf
+
+logrotate.conf
+
+manpath.config
+
+mke2fs.conf
+
+netconfig
+
+nftables.conf
+
+nsswitch.conf
+
+pam.conf
+
+pnm2ppa.conf
+
+resolv.conf
+
+rsyslog.conf
+
+rygel.conf
+
+sensors3.conf
+
+sudo.conf
+
+sudo_logsrvd.conf
+
+swtpm-localca.conf
+
+swtpm_setup.conf
+
+sysctl.conf
+
+ucf.conf
+
+usb_modeswitch.conf
+
+xattr.conf
+
+root@nitesh:/home/MyFiles/Documents# 
+
+![image](https://github.com/gitnitesh1995/Linux-Assignment-4/assets/61899084/80335095-1ce5-4c8e-83c4-ad39292ab1ba)
+
+
+**Q13. List all files in the "/etc" directory, filter the output to include only those containing the word "conf," and save the result to a file named "conf_files.txt."**
+
+
+**Q14. Open the "my_notes.txt" file in Vim. Use Vim's search and replace functionality to replace all occurrences of the word "important" with "critical." Save the changes.**
+
+**Q15. Create a new user account named "john_doe." Set the user's home directory to "/home/john_doe" and assign the user to the "users" group.**
+
+**Q16. Add the user "john_doe" to the sudoers file, allowing them superuser privileges. Confirm that "john_doe" can execute commands with sudo.**
+
+**Q17. Modify the user account "john_doe" to change the default shell to "/bin/bash" and set the account's expiration date to one month from today.**
+
+**Q18. Create a new group named "development_team." Add "john_doe" to this group and verify the group's existence.**
+
+**Q19. Remove "john_doe" from the "users" group and add them to the "development_team" group. Confirm the changes.**
+
+**Q20. Delete the user account "john_doe" and ensure that their home directory is also removed.**
+
+**Q21. Delete the group "development_team" and ensure that all users previously belonging to the group are appropriately handled.**
+
+**Q22. Implement a password policy that requires users to change their passwords every 90 days. Apply this policy to all existing and new user accounts.**
+
+**Q23. Manually lock the user account "john_doe." Attempt to log in as "john_doe" to confirm that the account is locked. Then, unlock the account.**
+
+**Q24. Use the id command to display detailed information about the "john_doe" user, including user ID, group ID, and supplementary groups.**
+
+**Q25. Configure the password aging for the user "john_doe" to enforce a maximum password age of 60 days. Confirm that the changes take effect.**
