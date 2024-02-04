@@ -373,6 +373,40 @@ root@nitesh:/home/MyFiles/Documents#
 
 **Q15. Create a new user account named "john_doe." Set the user's home directory to "/home/john_doe" and assign the user to the "users" group.**
 
+root@nitesh:/home/MyFiles/Documents# useradd -m -d /home/john_doe -g users john_doe
+
+root@nitesh:/home/MyFiles/Documents# passwd john_doe
+
+New password: 
+
+BAD PASSWORD: The password is a palindrome
+
+Retype new password: 
+
+Sorry, passwords do not match.
+
+New password: 
+
+BAD PASSWORD: The password is shorter than 8 characters
+
+Retype new password: 
+
+passwd: password updated successfully
+
+root@nitesh:/home/MyFiles/Documents# 
+
+![image](https://github.com/gitnitesh1995/Linux-Assignment-4/assets/61899084/745ddd8a-2d97-42aa-ae4f-f2fc484662c1)
+
+root@nitesh:/home/MyFiles/Documents# cat /etc/passwd
+
+root:x:0:0:root:/root:/bin/bash
+
+john_doe:x:1002:100::/home/john_doe:/bin/sh
+
+![image](https://github.com/gitnitesh1995/Linux-Assignment-4/assets/61899084/d0e7ad89-19b3-4bd9-934a-f8ca0b1f6f80)
+
+![image](https://github.com/gitnitesh1995/Linux-Assignment-4/assets/61899084/9159be3a-c770-4eda-97d2-c46ca55d4e84)
+
 **Q16. Add the user "john_doe" to the sudoers file, allowing them superuser privileges. Confirm that "john_doe" can execute commands with sudo.**
 
 **Q17. Modify the user account "john_doe" to change the default shell to "/bin/bash" and set the account's expiration date to one month from today.**
