@@ -340,6 +340,37 @@ root@nitesh:/home/MyFiles/Documents#
 
 **Q14. Open the "my_notes.txt" file in Vim. Use Vim's search and replace functionality to replace all occurrences of the word "important" with "critical." Save the changes.**
 
+root@nitesh:/home/MyFiles/Documents# cat my_notes.txt 
+
+hello ,this is question 9
+
+Friday 02 February 2024 11:43:14 PM IST
+
+This is a new line of text.
+
+It is crucial to highlight the important aspects of the project during the presentation.
+
+Understanding the important principles of time management can greatly enhance productivity.
+
+Clear communication is an important factor in fostering strong relationships within a team.
+
+Environmental conservation is an important responsibility that requires collective effort.
+
+Recognizing the important role of education in personal growth is key to lifelong learning.
+
+root@nitesh:/home/MyFiles/Documents# 
+
+![image](https://github.com/gitnitesh1995/Linux-Assignment-4/assets/61899084/457074d5-4f98-4479-88fa-2ad328fa84a8)
+
+:%s/important/critical/g
+
+![image](https://github.com/gitnitesh1995/Linux-Assignment-4/assets/61899084/d1a3e14d-d59e-4e26-9c46-0c42bbc9902e)
+
+![image](https://github.com/gitnitesh1995/Linux-Assignment-4/assets/61899084/279f6b24-d8b0-49f5-846d-07146ee7631d)
+
+![image](https://github.com/gitnitesh1995/Linux-Assignment-4/assets/61899084/0f399291-de75-4c0e-b6de-a29306069533)
+
+
 **Q15. Create a new user account named "john_doe." Set the user's home directory to "/home/john_doe" and assign the user to the "users" group.**
 
 **Q16. Add the user "john_doe" to the sudoers file, allowing them superuser privileges. Confirm that "john_doe" can execute commands with sudo.**
