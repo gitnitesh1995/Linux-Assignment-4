@@ -409,6 +409,17 @@ john_doe:x:1002:100::/home/john_doe:/bin/sh
 
 **Q16. Add the user "john_doe" to the sudoers file, allowing them superuser privileges. Confirm that "john_doe" can execute commands with sudo.**
 
+![image](https://github.com/gitnitesh1995/Linux-Assignment-4/assets/61899084/66f9730e-1d99-4ce0-9889-aaf889270548)
+
+nitesh@nitesh:~$ su john_doe
+
+Password: 
+
+$ 
+
+![image](https://github.com/gitnitesh1995/Linux-Assignment-4/assets/61899084/065cfead-130e-4da9-bdd7-2d126b192f78)
+
+
 **Q17. Modify the user account "john_doe" to change the default shell to "/bin/bash" and set the account's expiration date to one month from today.**
 
 **Q18. Create a new group named "development_team." Add "john_doe" to this group and verify the group's existence.**
