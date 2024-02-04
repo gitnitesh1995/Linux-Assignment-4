@@ -491,15 +491,128 @@ nitesh@nitesh:~$
 
 ![image](https://github.com/gitnitesh1995/Linux-Assignment-4/assets/61899084/7400effe-c273-40f4-a664-f84bd470fb9f)
 
-
 **Q20. Delete the user account "john_doe" and ensure that their home directory is also removed.**
+
+nitesh@nitesh:~$ sudo deluser --remove-home john_doe
+
+Looking for files to backup/remove ...
+
+Removing files ...
+
+Removing user `john_doe' ...
+
+Done.
+
+nitesh@nitesh:~$ 
+
+![image](https://github.com/gitnitesh1995/Linux-Assignment-4/assets/61899084/a1654e02-01d8-41bf-86cf-8b5a1fa1d788)
 
 **Q21. Delete the group "development_team" and ensure that all users previously belonging to the group are appropriately handled.**
 
+nitesh@nitesh:~$ sudo deluser john_doe development_team
+
+Removing user `john_doe' from group `development_team' ...
+
+Done.
+
+nitesh@nitesh:~$ sudo delgroup development_team
+
+Removing group `development_team' ...
+
+Done.
+
+nitesh@nitesh:~$ grep development_team /etc/group
+
+nitesh@nitesh:~$ 
+
+nitesh@nitesh:~$ cat /etc/passwd
+
+root:x:0:0:root:/root:/bin/bash
+
+john_doe:x:1002:100::/home/john_doe:/bin/sh
+
+![image](https://github.com/gitnitesh1995/Linux-Assignment-4/assets/61899084/39b5ad9a-f76b-4ea0-af92-810e6b1dc2af)
+
+![image](https://github.com/gitnitesh1995/Linux-Assignment-4/assets/61899084/66a6a56a-8d9c-4969-b720-1bda70156447)
+
+
 **Q22. Implement a password policy that requires users to change their passwords every 90 days. Apply this policy to all existing and new user accounts.**
+
+nitesh@nitesh:~$ for username in $(cut -d: -f1 /etc/passwd); do
+
+    sudo chage -M 90 $username
+    
+done
+
+[sudo] password for nitesh: 
+
+nitesh@nitesh:~$ sudo chage -l john_doe
+
+Last password change					: Feb 04, 2024
+
+Password expires					: May 04, 2024
+
+Password inactive					: never
+
+Account expires						: never
+
+Minimum number of days between password change		: 0
+
+Maximum number of days between password change		: 90
+
+Number of days of warning before password expires	: 7
+
+nitesh@nitesh:~$ 
+
+![image](https://github.com/gitnitesh1995/Linux-Assignment-4/assets/61899084/d2fce520-1280-4dce-a2af-494c328815dc)
 
 **Q23. Manually lock the user account "john_doe." Attempt to log in as "john_doe" to confirm that the account is locked. Then, unlock the account.**
 
+nitesh@nitesh:~$ sudo passwd -l john_doe
+
+passwd: password expiry information changed.
+
+nitesh@nitesh:~$ su john_doe
+
+Password: 
+
+su: Authentication failure
+
+nitesh@nitesh:~$ su john_doe
+
+Password: 
+
+su: Authentication failure
+
+nitesh@nitesh:~$ su john_doe
+
+Password: 
+
+su: Authentication failure
+
+nitesh@nitesh:~$ sudo passwd -u john_doe
+
+passwd: password expiry information changed.
+
+nitesh@nitesh:~$ su john_doe
+
+Password: 
+
+$ 
+
+![image](https://github.com/gitnitesh1995/Linux-Assignment-4/assets/61899084/eb36c6fb-6abe-4dce-b2de-cb9f6ebf1eba)
+
+![image](https://github.com/gitnitesh1995/Linux-Assignment-4/assets/61899084/290e5d32-c3eb-49b0-bebe-f9169d9eb3d5)
+
 **Q24. Use the id command to display detailed information about the "john_doe" user, including user ID, group ID, and supplementary groups.**
+
+nitesh@nitesh:~$ id john_doe
+
+uid=1002(john_doe) gid=100(users) groups=100(users)
+
+nitesh@nitesh:~$ 
+
+![image](https://github.com/gitnitesh1995/Linux-Assignment-4/assets/61899084/cdb6f765-dbc6-4e48-8765-faa3d06dd152)
+
 
 **Q25. Configure the password aging for the user "john_doe" to enforce a maximum password age of 60 days. Confirm that the changes take effect.**
